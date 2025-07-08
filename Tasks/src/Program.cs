@@ -129,11 +129,11 @@ namespace Pontotrack.Tasks
 
                 foreach (Event @event in events)
                 {
-                    // Caso o servico de automação não esteja rodando
-                    if (!IsRunning)
-                    {
-                        throw new ValidationException("Automação foi parada");
-                    }
+                    //// Caso o servico de automação não esteja rodando
+                    //if (!IsRunning)
+                    //{
+                    //    throw new ValidationException("Automação foi parada");
+                    //}
 
                     object ret;
 

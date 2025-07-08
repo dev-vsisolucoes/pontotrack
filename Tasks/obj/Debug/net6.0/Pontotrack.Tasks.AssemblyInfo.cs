@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pontotrack.Tasks")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce3e2748181f915df1d0c45982011ddffccd8646")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pontotrack.Tasks")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pontotrack.Tasks")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

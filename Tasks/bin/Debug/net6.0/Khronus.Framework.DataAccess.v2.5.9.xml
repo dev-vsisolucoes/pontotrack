@@ -150,6 +150,13 @@
             <param name="bo"></param>
             <returns></returns>
         </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.InsertAsync(Khronus.Framework.DataAccess.ORM.BusinessObjectBase)">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <returns></returns>
+        </member>
         <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Update(Khronus.Framework.DataAccess.ORM.BusinessObjectBase)">
             <summary>
             
@@ -157,7 +164,21 @@
             <param name="bo"></param>
             <returns></returns>
         </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.UpdateAsync(Khronus.Framework.DataAccess.ORM.BusinessObjectBase)">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <returns></returns>
+        </member>
         <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Delete(Khronus.Framework.DataAccess.ORM.BusinessObjectBase)">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.DeleteAsync(Khronus.Framework.DataAccess.ORM.BusinessObjectBase)">
             <summary>
             
             </summary>
@@ -245,6 +266,14 @@
             <param name="parameters"></param>
             <returns></returns>
         </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.ExecuteDataTableAsync(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
         <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Execute(System.Data.Common.DbCommand)">
             <summary>
             
@@ -253,6 +282,14 @@
             <returns></returns>
         </member>
         <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.ExecuteNonQuery(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.ExecuteNonQueryAsync(System.String,System.Data.Common.DbParameter[])">
             <summary>
             
             </summary>
@@ -335,6 +372,11 @@
             Summary description for ParameterFactory
             </summary>
         </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.BusinessObjectBase">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Khronus.Framework.DataAccess.ORM.BusinessObjectManager">
             <summary>
             
@@ -374,6 +416,14 @@
             <param name="type"></param>
             <returns></returns>
         </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.InsertAsync``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
         <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.Update``1(``0)">
             <summary>
             
@@ -382,7 +432,7 @@
             <param name="type"></param>
             <returns></returns>
         </member>
-        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.Delete``1(``0)">
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.UpdateAsync``1(``0)">
             <summary>
             
             </summary>
@@ -390,7 +440,7 @@
             <param name="type"></param>
             <returns></returns>
         </member>
-        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ValidateBusinessObject``1(``0)">
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.Delete``1(``0)">
             <summary>
             
             </summary>
@@ -407,29 +457,14 @@
             <param name="valueList"></param>
             <returns></returns>
         </member>
-        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.FindByKey``1(System.Object[])">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="keyValues"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.FindByFilter``1(System.String,System.Boolean)">
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.FindByFilter``1(System.String,System.Boolean,System.Boolean)">
             <summary>
             
             </summary>
             <typeparam name="T"></typeparam>
             <param name="filter"></param>
             <param name="filterByStore"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByKey``1(System.Object[])">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="keyValues"></param>
+            <param name="filterInactive"></param>
             <returns></returns>
         </member>
         <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByFilter``1">
@@ -439,16 +474,17 @@
             <typeparam name="T"></typeparam>
             <returns></returns>
         </member>
-        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByFilter``1(System.String,System.Boolean)">
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByFilter``1(System.String,System.Boolean,System.Boolean)">
             <summary>
             
             </summary>
             <typeparam name="T"></typeparam>
             <param name="filter"></param>
             <param name="filterByStore"></param>
+            <param name="filterInactive"></param>
             <returns></returns>
         </member>
-        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByFilter``1(System.String,System.String,System.Boolean)">
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByFilter``1(System.String,System.String,System.Boolean,System.Boolean)">
             <summary>
             
             </summary>
@@ -456,18 +492,41 @@
             <param name="filter"></param>
             <param name="order"></param>
             <param name="filterByStore"></param>
+            <param name="filterInactive"></param>
             <returns></returns>
         </member>
-        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByStatement``1(System.String,System.Boolean)">
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByFilterAsync``1(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filter"></param>
+            <param name="order"></param>
+            <param name="filterByStore"></param>
+            <param name="filterInactive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByStatement``1(System.String,System.Boolean,System.Boolean)">
             <summary>
             
             </summary>
             <typeparam name="T"></typeparam>
             <param name="statement"></param>
             <param name="filterByStore"></param>
+            <param name="filterInactive"></param>
             <returns></returns>
         </member>
-        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ExecuteStatement``1(System.String)">
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByStatementAsync``1(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="statement"></param>
+            <param name="filterByStore"></param>
+            <param name="filterInactive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ExecuteStatement``1(System.String,System.Boolean,System.Boolean)">
             <summary>
             
             </summary>
@@ -475,7 +534,17 @@
             <param name="statement"></param>
             <returns></returns>
         </member>
-        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.CreateStatement(System.Collections.Generic.List{System.Data.Common.DbParameter},System.Type,System.Text.StringBuilder,System.Object[])">
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ExecuteStatementAsync``1(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="statement"></param>
+            <param name="filterByStore"></param>
+            <param name="filterInactive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.CreateStatement(System.Collections.Generic.List{System.Data.Common.DbParameter},System.Type,System.Text.StringBuilder,System.Object[],System.Boolean,System.Boolean)">
             <summary>
             
             </summary>
@@ -507,7 +576,23 @@
             <param name="readOnly"></param>
             <returns></returns>
         </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ValidateBusinessObject``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
         <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.GetNumerator(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="store"></param>
+            <param name="module"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.GetNumeratorAsync(System.String,System.String)">
             <summary>
             
             </summary>
@@ -571,6 +656,16 @@
             </summary>
             
         </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.IsInactiveFieldAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.IsInactiveFieldAttribute.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Khronus.Framework.DataAccess.ORM.IsIndentityAttribute">
             <summary>
             Summary description for IsIndentity
@@ -628,6 +723,12 @@
         <member name="M:Khronus.Framework.DataAccess.ORM.ValueObject.ToString">
             <summary>
             Serialização customizada do modelo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.ValueObject.Validate">
+            <summary>
+            
             </summary>
             <returns></returns>
         </member>

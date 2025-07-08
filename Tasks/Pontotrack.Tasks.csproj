@@ -33,10 +33,10 @@
 
   <ItemGroup>
     <Reference Include="Khronus.Framework.Core.v2.5.9">
-      <HintPath>..\..\..\VSISolucoes\Khronus.Framework\Net\v2.5.9\Core\bin\Debug\Khronus.Framework.Core.v2.5.9.dll</HintPath>
+      <HintPath>..\..\..\VSISolucoes\Khronus.Framework\Net\v2.5.9\Khronus.Framework.Core.v2.5.9\bin\Debug\Khronus.Framework.Core.v2.5.9.dll</HintPath>
     </Reference>
     <Reference Include="Khronus.Framework.DataAccess.v2.5.9">
-      <HintPath>..\..\..\VSISolucoes\Khronus.Framework\Net\v2.5.9\DataAccess\bin\Debug\Khronus.Framework.DataAccess.v2.5.9.dll</HintPath>
+      <HintPath>..\..\..\VSISolucoes\Khronus.Framework\Net\v2.5.9\Khronus.Framework.DataAccess.v2.5.9\bin\Debug\Khronus.Framework.DataAccess.v2.5.9.dll</HintPath>
     </Reference>
     <Reference Include="VSIntegra.Framework.Core.v6.0.11">
       <HintPath>..\..\..\VSISolucoes\VSIntegra\VSIntegra.Framework\VSIntegra.Framework.Core.v6.0.11\bin\Debug\net6.0\VSIntegra.Framework.Core.v6.0.11.dll</HintPath>

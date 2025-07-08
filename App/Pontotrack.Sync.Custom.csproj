@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Khronus.Framework.Core.v2.5.7">
+      <HintPath>..\..\..\VSISolucoes\Khronus.Framework\Net\v2.5.7\Core\src\bin\Debug\Khronus.Framework.Core.v2.5.7.dll</HintPath>
+    </Reference>
+    <Reference Include="Khronus.Framework.DataAccess.v2.5.7">
+      <HintPath>..\..\..\VSISolucoes\Khronus.Framework\Net\v2.5.7\DataAccess\src\bin\Debug\Khronus.Framework.DataAccess.v2.5.7.dll</HintPath>
+    </Reference>
+    <Reference Include="VSIntegra.Framework.v6.0.0.3">
+      <HintPath>..\..\..\VSISolucoes\VSIntegra\VSIntegra.v6.0.0.3\VSIntegra.Framework\src\bin\Debug\net6.0\VSIntegra.Framework.v6.0.0.3.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

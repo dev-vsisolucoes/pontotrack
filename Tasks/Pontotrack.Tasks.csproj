@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="9.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    <PackageReference Include="MySql.Data" Version="8.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Npgsql" Version="7.0.2" />
+    <PackageReference Include="Oracle.ManagedDataAccess" Version="21.10.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+    <PackageReference Include="System.Data.Odbc" Version="7.0.0" />
+    <PackageReference Include="System.Data.OleDb" Version="7.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.117" />
+    <PackageReference Include="System.Management" Version="7.0.1" />
+    <PackageReference Include="System.Security.Permissions" Version="7.0.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
+    <PackageReference Include="WkHtmlToPdf" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Khronus.Framework.Core.v2.5.9">
+      <HintPath>..\..\..\VSISolucoes\Khronus.Framework\Net\v2.5.9\Core\bin\Debug\Khronus.Framework.Core.v2.5.9.dll</HintPath>
+    </Reference>
+    <Reference Include="Khronus.Framework.DataAccess.v2.5.9">
+      <HintPath>..\..\..\VSISolucoes\Khronus.Framework\Net\v2.5.9\DataAccess\bin\Debug\Khronus.Framework.DataAccess.v2.5.9.dll</HintPath>
+    </Reference>
+    <Reference Include="VSIntegra.Framework.Core.v6.0.11">
+      <HintPath>..\..\..\VSISolucoes\VSIntegra\VSIntegra.Framework\VSIntegra.Framework.Core.v6.0.11\bin\Debug\net6.0\VSIntegra.Framework.Core.v6.0.11.dll</HintPath>
+    </Reference>
+    <Reference Include="VSIntegra.Framework.Model.v6.0.11">
+      <HintPath>..\..\..\VSISolucoes\VSIntegra\VSIntegra.Framework\VSIntegra.Framework.Model.v6.0.11\bin\Debug\VSIntegra.Framework.Model.v6.0.11.dll</HintPath>
+    </Reference>
+    <Reference Include="VSIntegra.Framework.Provider.v6.0.11">
+      <HintPath>..\..\..\VSISolucoes\VSIntegra\VSIntegra.Framework\VSIntegra.Framework.Provider.v6.0.11\bin\Debug\net6.0\VSIntegra.Framework.Provider.v6.0.11.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

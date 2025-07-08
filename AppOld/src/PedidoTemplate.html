@@ -1,0 +1,461 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>
+		Hinova - Venda
+	</title>
+	<meta name="description" content="Sistema de gestão de rastreadores" />
+	<meta name="keywords" content="hinova, sistema, gestão, rastreador, veículo" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://sgr.hinova.com.br/sgr/sgrv2/css/style-termo-timbrado.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<div class="container">
+
+		<style>
+			#assinatura {
+				position: absolute;
+				left: -15%;
+				margin-top: -18px;
+			}
+
+			#hidden {
+				display: none;
+				border: 0;
+				border-bottom: 1px solid;
+			}
+
+			.red {
+				color: red !important;
+			}
+		</style>
+		<style media="print">
+			#assinatura {
+				position: absolute;
+				left: -25%;
+				margin-top: -20px;
+			}
+		</style>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="col-md-3">
+					<img src="data:image/jpeg;base64,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" />
+				</div>
+				<div class="col-md-6" align="center">
+					<h3>PEDIDO DE VENDA</h3>
+					<div class="row-fluid" align="justify">
+						<p>Telefone: (43)3017-0227</p>
+						<p>E-mail: atendimento@pontotrack.com</p>
+						<p>Vendedor: <strong>MOSKIT TECNOLOGIA S.A</strong></p>
+					</div>
+				</div>
+				<div class="col-md-3" align="center">
+					<p>N°21538            <br />05/04/2023<br /> 09:08:05</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row-fluid bordas-colunas alinhar-bordas">
+			<div class="container-fluid alinhar-bordas">
+				<!-- DADOS CLIENTE -->
+				<div class="col-md-12">
+					<h2>DADOS DO CLIENTE</h2>
+				</div>
+				<div class="col-md-5">
+					<p>Nome: <strong>TESTE VSI</strong></p>
+				</div>
+				<div class="col-md-2">
+					<p>CPF: <strong>35763053000149</strong></p>
+				</div>
+				<div class="col-md-5">
+					<p>Ponto de Venda : <strong>CURITIBA</strong> </p>
+				</div>
+				<div class="col-md-7">
+					<p>Logradouro: <strong>RUA AGRRIO ANTUNES</strong></p>
+				</div>
+				<div class="col-md-2">
+					<p>Número: 200</p>
+				</div>
+				<div class="col-md-3">
+					<p>Complemento: COMPLEMENTO XYZ</p>
+				</div>
+				<div class="col-md-6">
+					<p>Bairro: <strong>JARDIM BONSUCESSO</strong></p>
+				</div>
+
+				<div class="col-md-4">
+					<p>Cidade: <strong>SOROCABA</strong></p>
+				</div>
+				<div class="col-md-2">
+					<p>Estado: <strong>SP</strong></p>
+				</div>
+				<div class="col-md-4">
+					<p>Telefone: <strong>159812925551</strong></p>
+				</div>
+				<div class="col-md-4">
+					<p>Celular: <strong>Não INFORMADO</strong></p>
+				</div>
+				<div class="col-md-4">
+					<p>Celular: <strong>Não Informado</strong></p>
+				</div>
+				<div class="col-md-12">
+					<p>Email: <strong>teste@vsisolucoes.com.br</strong></p>
+				</div>
+				<div class="col-md-6">
+					<p>Login: <strong><input type="text" /></strong></p>
+				</div>
+				<div class="col-md-6">
+					<p>Senha: <strong><input type="text" /></strong></p>
+				</div>
+				<div class="col-md-12">
+					<p>
+						<strong>
+							Origem:
+							<select id="origem">
+
+
+
+								<option value="1">INDICACAO</option>
+
+
+
+								<option value="2">TELEVISAO - BRASIL URGENTE CWB</option>
+
+
+
+								<option value="3">GOOGLE</option>
+
+
+
+								<option value="4">FACEBOOK</option>
+
+
+
+								<option value="5">CLIENTE ATIVO</option>
+
+
+
+								<option value="6">LOJA</option>
+
+
+
+								<option value="7">PROSPECÇÃO ATIVA</option>
+
+
+
+								<option value="9">RADIO</option>
+
+
+
+								<option value="10">INSTAGRAM</option>
+
+
+
+								<option value="11">OUTDOOR</option>
+
+
+
+								<option value="12">TELEVISAO - REDE MASSA</option>
+
+
+
+								<option value="13">TELEVISAO - RIC TV</option>
+
+
+
+								<option value="14">TELEVISAO - CIDADE ALERTA MGA</option>
+
+
+
+								<option value="16">TELEVISAO - PARANA NO AR CWB</option>
+
+
+
+								<option value="17">TELEVISAO - BEIJA FLOR</option>
+
+
+
+								<option value="18">TELEVISAO - BORA PR CWB</option>
+
+
+
+								<option value="19">PUBLIC +</option>
+
+
+
+								<option value="20">REMARKETING</option>
+
+
+
+								<option value="21">PANFLETAGEM</option>
+
+
+
+								<option value="22">TELEVISAO - PRIMEIRO IMPACTO</option>
+
+
+
+								<option value="23">TELEVISAO - TAROBA NOTICIA</option>
+
+
+
+								<option value="24">TELEVISAO - TAROBA URGENTE</option>
+
+
+
+								<option value="25">REPASSE</option>
+
+
+
+								<option value="26">TELEVISAO - TRIBUNA DA MASSA CWB</option>
+
+
+
+								<option value="27">TELEVISAO - CIDADE ALERTA CWB</option>
+
+
+
+								<option value="28">SAF - BOM PASTOR</option>
+
+
+
+								<option value="29">QUALIFICAÇÃO DE LEADS</option>
+
+
+
+								<option value="30">TELEVISÃO - BOA TARDE PARANÁ CWB</option>
+
+
+
+								<option value="31">SITE</option>
+
+
+
+								<option value="32">YOUTUBE</option>
+
+
+
+								<option value="33">TELEVISÃO - ATUAÇÃO TV2C LONDRINA</option>
+
+
+
+
+							</select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							Indicação: &nbsp;&nbsp;<input type="text" class="borderless" />
+						</strong>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<br />
+		<div class="row-fluid bordas-colunas alinhar-bordas">
+			<div class="container-fluid ">
+				<!-- DADOS VEICULO -->
+				<div class="col-md-12">
+					<h2>DADOS DO VEÍCULO</h2>
+				</div>
+				<div class="col-md-4">
+					<p>PLACA: <strong>RET-444</strong></p>
+				</div>
+				<div class="col-md-2">
+					<p>RENAVAM: <strong></strong></p>
+				</div>
+				<div class="col-md-4">
+					<p>MODELO: <strong>CELTA</strong></p>
+				</div>
+				<div class="col-md-2">
+					<p>ANO: <strong>2007 / 2007</strong></p>
+				</div>
+				<div class="col-md-6">
+					<p>MARCA: <strong>CHEVROLET</strong></p>
+				</div>
+
+				<div class="col-md-2">
+					<p>COR: <strong>DOURADA</strong></p>
+				</div>
+				<div class="col-md-4">
+					<p>Pasivel Bloqueio: <strong><input type="checkbox" /> SIM  &nbsp; &nbsp;<input type="checkbox" /> NÃO</strong></p>
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid bordas-colunas alinhar-bordas">
+			<div class="container-fluid ">
+				<div class="col-md-12">
+					<h2>PRODUTOS CONTRATADOS</h2>
+				</div>
+				<div class="col-md-12" align="center">
+					<div class="col-md-3" style="border: 0 !important">
+
+
+					</div>
+					<div class="col-md-3" style="border: 0 !important">
+
+
+					</div>
+					<div class="col-md-3" style="border: 0 !important">
+
+
+						<p>
+							<input type="checkbox" id="acessorios" />&emsp;RASTREAMENTO + ASSISTENCIA <input type="text" id="hidden" />
+						</p>
+					</div>
+
+					<div class="col-md-3" style="border: 0 !important">
+
+
+					</div>
+					<div class="col-md-3" style="border: 0 !important">
+
+
+						<p>
+							<input type="checkbox" id="acessorios" />&emsp;PROTEÇÃO VEICULAR <input type="text" id="hidden" />
+						</p>
+					</div>
+					<div class="col-md-3" style="border: 0 !important">
+
+
+					</div>
+
+					<div class="col-md-3" style="border: 0 !important">
+
+
+						<p>
+							<input type="checkbox" id="acessorios" />&emsp;RASTREAMENTO <input type="text" id="hidden" />
+						</p>
+					</div>
+					<div class="col-md-3" style="border: 0 !important">
+
+
+					</div>
+					<div class="col-md-3" style="border: 0 !important">
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid bordas-colunas alinhar-bordas espacamento_padrao">
+			<div class="container-fluid alinhar_bordas">
+				<div class="col-md-12">
+					<h2>FORMA DE PAGAMENTO</h2>
+				</div>
+				<div class="col-md-6">
+					<p><strong>Valor Taxa de Instalação por Veiculo: R$ 125.00 </strong></p>
+				</div>
+				<div class="col-md-6">
+					<p><strong>Forma Pagamento: BOLETO BANCARIO </strong></p>
+				</div>
+				<div class="col-md-6">
+					<p style="margin: 0px!important;height: 12px!important;"><strong>Valor Mensal por Veículo R$ 588.00</strong></p>
+					<span style="font-size: 0.8em;">
+						<strong>
+							<i>
+								<select style="height: 14px!important;">
+									<option> - </option>
+									<option>*Desconto de 10,00 para pagamentos até o vencimento</option>
+								</select>
+							</i>
+						</strong>
+					</span>
+				</div>
+				<div class="col-md-6">
+					<p><strong>Forma Pagamento: CARTAO DE CREDITO</strong></p>
+				</div>
+				<div class="col-md-6">
+					<p><strong>Modalidade: <input type="checkbox" checked="true" />Comodato &nbsp;&nbsp;<input type="checkbox" />Compra </strong></p>
+				</div>
+				<div class="col-md-6">
+					<p><strong>Prazo Contratual: <select id="mes"><option value="336"> 12 MESES</option><option value="649">24 MESES</option><option value="644">36 MESES</option></select></strong></p>
+				</div>
+				<div class="col-md-12">
+					<p>
+						<strong>
+							Data Vencimento: Dia 10
+							&emsp;&emsp;&emsp;&emsp;1ª  Para: <select id='select'>
+								<option> - </option>
+								<option>JANEIRO</option>
+								<option>FEVEREIRO</option>
+								<option>MARÇO</option>
+								<option>ABRIL</option>
+								<option>MAIO</option>
+								<option>JUNHO</option>
+								<option>JULHO</option>
+								<option>AGOSTO</option>
+								<option>SETEMBRO</option>
+								<option>OUTUBRO</option>
+								<option>NOVEMBRO</option>
+								<option>DEZEMBRO</option>
+							</select>
+						</strong>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--OBSERFAÇÕES-->
+		<div class="row-fluid espacamento_padrao">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<h2>OBSERVAÇÕES</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<textarea class="form-control resize-vertical" style="font-size: 11px" rows="7"> Teste observação 
+                  </textarea>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="col-md-12">
+			<p>Por este Formulário de Adesão que está vinculado ao Contrato de prestação de serviços de rastreamento e monitoramento de veículos via satéliite com locação de equipamentos sendo parte integrante deste, complementando suas cláusulas e condições, formalizo minha adesão ao Contrato, suas cláusulas e condições, com as quais estou de pleno acordo, assim como aceito e concordo com todas as informações, dados e valores deste formulário que assino.</p>
+		</div>
+		<!-- ASSINATURA -->
+		<div class="container-fluid">
+			<div class="col-md-12">
+				<div class="col-md-12" style="font-size: 15px">
+
+					<p class="text-center">LONDRINA, 05/04/2023<br /></p>
+				</div>
+				<div class="col-md-12">
+					<img style="margin-left: 75%" src="https://sgr.hinova.com.br/sgr/sgrv2//img/ponto_track/assinatura.png" id="assinatura" />
+				</div>
+				<div class="col-md-6 text-center">
+					<br /><br /><br /><br />
+					<p><strong>___________________________________________</strong></p>
+					<p>TESTE VSI</p>
+					<p>35763053000149</p>
+					<p></p>
+				</div>
+				<div class="col-md-6 text-center">
+					<br /><br /><br /><br />
+					<p class="text-center">___________________________________________</p>
+					<p class="text-center">Ponto Track Rastreamento</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+    $(document).ready(function(){
+        $('#acessorios').click(function() {
+           $('#hidden').show("slice");
+        });
+    });
+    $('#mes').val('');
+
+    $('#origem').val('5');
+
+		</script>
+		<!--<div class="text-center hidden-print"><button type="button" class="btn btn-info" onclick="window.print();"><strong>Imprimir</strong></button></div>-->
+	</div>
+</body>
+</html>

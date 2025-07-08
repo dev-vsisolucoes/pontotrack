@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /pontotrack/api/
+RewriteCond $1 !^(tmp|config|core|css|js|fonts|robots\.pdf)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+

@@ -1,0 +1,6 @@
+<Application>
+    <RootPath>
+        <Remote>/clientes/pontotrack/</Remote>
+        <Local>/pontotrack/</Local>
+    </RootPath>
+</Application>

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/clientes/pontotrack/static/js/main.1d3cbaac.chunk.js",
+    "main.js.map": "/clientes/pontotrack/static/js/main.1d3cbaac.chunk.js.map",
+    "runtime~main.js": "/clientes/pontotrack/static/js/runtime~main.68953954.js",
+    "runtime~main.js.map": "/clientes/pontotrack/static/js/runtime~main.68953954.js.map",
+    "static/js/2.13a7afbc.chunk.js": "/clientes/pontotrack/static/js/2.13a7afbc.chunk.js",
+    "static/js/2.13a7afbc.chunk.js.map": "/clientes/pontotrack/static/js/2.13a7afbc.chunk.js.map",
+    "index.html": "/clientes/pontotrack/index.html",
+    "precache-manifest.4fb9c459465467a3447426f90a67dd13.js": "/clientes/pontotrack/precache-manifest.4fb9c459465467a3447426f90a67dd13.js",
+    "service-worker.js": "/clientes/pontotrack/service-worker.js"
+  }
+}

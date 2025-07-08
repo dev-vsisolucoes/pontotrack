@@ -1,0 +1,635 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Khronus.Framework.DataAccess.v2.5.9</name>
+    </assembly>
+    <members>
+        <member name="P:Khronus.Framework.DataAccess.Components.SqlParser`1.SelectPart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.SqlParser`1.FromPart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.SqlParser`1.JoinPart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.SqlParser`1.WherePart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.SqlParser`1.GroupByPart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.SqlParser`1.HavingPart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.SqlParser`1.OrderByPart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.SqlParser`1.LimitPart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.SqlParser`1.TableName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.SqlParser`1.TableAlias">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.SqlParser`1.ListField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.SqlParser`1.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.SqlParser`1.GetPosClause(System.String,System.String[],System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.SqlParser`1.ToString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.Components.DataAccessManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Khronus.Framework.DataAccess.Components.DataAccessManager.commandlog">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Khronus.Framework.DataAccess.Components.DataAccessManager.connection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Khronus.Framework.DataAccess.Components.DataAccessManager.transaction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.DataAccessManager.ConnectionString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.DataAccessManager.Provider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.Components.DataAccessManager.ConnectionOutput">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.#ctor(Khronus.Framework.DataAccess.Components.ConnectionProviders,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="provider"></param>
+            <param name="connectionString"></param>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.BeginTransaction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.CommitTransaction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.RollbackTransaction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Execute(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="statement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Insert(Khronus.Framework.DataAccess.ORM.BusinessObjectBase)">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Update(Khronus.Framework.DataAccess.ORM.BusinessObjectBase)">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Delete(Khronus.Framework.DataAccess.ORM.BusinessObjectBase)">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.UpdateFields(Khronus.Framework.DataAccess.ORM.BusinessObjectBase,System.String[],System.Object[])">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <param name="fieldList"></param>
+            <param name="valueList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Find``1(System.Object[])">
+            <summary>
+            Metodo para busca de registro especifico a partir das chaves
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Find``1(System.Object[0:,0:])">
+            <summary>
+            Metodo para busca de registro especifico a partir de uma lista de campos/valores
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Find(Khronus.Framework.DataAccess.ORM.BusinessObjectBase,System.Object[0:,0:])">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Find(Khronus.Framework.DataAccess.ORM.BusinessObjectBase,System.Object[])">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.GetList(Khronus.Framework.DataAccess.ORM.BusinessObjectBase,System.Object[0:,0:])">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.GetList(Khronus.Framework.DataAccess.ORM.BusinessObjectBase,System.Object[0:,0:],System.Object[0:,0:])">
+            <summary>
+            
+            </summary>
+            <param name="bo"></param>
+            <param name="param"></param>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.GetListBySelect(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="statement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.ExecuteReader(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.ExecuteDataTable(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Execute(System.Data.Common.DbCommand)">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.ExecuteNonQuery(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.ExecuteScalar(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.BuildCommand(System.Int32,Khronus.Framework.DataAccess.ORM.BusinessObjectBase,System.Object[0:,0:],System.Object,System.Object[0:,0:],System.String)">
+            <summary>
+            
+            </summary>
+            <param name="commandType"></param>
+            <param name="bo"></param>
+            <param name="param1"></param>
+            <param name="param2"></param>
+            <param name="param3"></param>
+            <param name="statement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Log(System.Data.Common.DbCommand)">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.GetDbType(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.NormalizeCommand(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.NormalizeParameter(System.Data.Common.DbParameter)">
+            <summary>
+            
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.LogCommand(System.Data.Common.DbCommand)">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Dispose">
+            <summary>
+            Implementação pública de Dispose 
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Dispose(System.Boolean)">
+             <summary>
+            Implementação protegida para permitir herança
+             </summary>
+             <param name="disposing"></param>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.Components.DataAccessManager.Finalize">
+            <summary>
+            Finalizador (caso recursos não gerenciados existam) 
+            </summary>
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.Components.ParameterFactory">
+            <summary>
+            Summary description for ParameterFactory
+            </summary>
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.BusinessObjectManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.Store">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.StatementType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.DataAccessManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.#ctor(Khronus.Framework.DataAccess.Components.DataAccessManager)">
+            <summary>
+            
+            </summary>
+            <param name="dataAccessManager"></param>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.Insert``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.Update``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.Delete``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ValidateBusinessObject``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.UpdateFields(Khronus.Framework.DataAccess.ORM.BusinessObjectBase,System.String[],System.Object[])">
+            <summary>
+            
+            </summary>
+            <param name="bob"></param>
+            <param name="fieldList"></param>
+            <param name="valueList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.FindByKey``1(System.Object[])">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="keyValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.FindByFilter``1(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filter"></param>
+            <param name="filterByStore"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByKey``1(System.Object[])">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="keyValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByFilter``1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByFilter``1(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filter"></param>
+            <param name="filterByStore"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByFilter``1(System.String,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filter"></param>
+            <param name="order"></param>
+            <param name="filterByStore"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ListByStatement``1(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="statement"></param>
+            <param name="filterByStore"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.ExecuteStatement``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="statement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.CreateStatement(System.Collections.Generic.List{System.Data.Common.DbParameter},System.Type,System.Text.StringBuilder,System.Object[])">
+            <summary>
+            
+            </summary>
+            <param name="parameters"></param>
+            <param name="type"></param>
+            <param name="sql"></param>
+            <param name="keyValues"></param>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.CreateInstanceByDataRow(System.Data.DataRow,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="row"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.GetTableName(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="businessObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.GetFields(System.Type,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="businessObject"></param>
+            <param name="readOnly"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.GetNumerator(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="store"></param>
+            <param name="module"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.Dispose">
+            <summary>
+            Implementação pública de Dispose 
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.Dispose(System.Boolean)">
+             <summary>
+            Implementação protegida para permitir herança
+             </summary>
+             <param name="disposing"></param>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.BusinessObjectManager.Finalize">
+            <summary>
+            Finalizador (caso recursos não gerenciados existam) 
+            </summary>
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.DescriptionAttribute">
+            <summary>
+            Summary description for DescriptionAttribute
+            </summary>
+            
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.IsFileField">
+            <summary>
+            Summary description for IsIndentity
+            </summary>
+            
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.IsLastUpdateDateTimeFieldAttribute">
+            <summary>
+            Summary description for IsIndentity
+            </summary>
+            
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.IsLastUpdateDateTimeFieldAttribute.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.IsCreateDateTimeFieldAttribute">
+            <summary>
+            Summary description for IsIndentity
+            </summary>
+            
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.IsCreateDateTimeFieldAttribute.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.IsValidAttribute">
+            <summary>
+            Summary description for IsIndentity
+            </summary>
+            
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.IsIndentityAttribute">
+            <summary>
+            Summary description for IsIndentity
+            </summary>
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.IsForeignKey">
+            <summary>
+            Summary description for IsIndentity
+            </summary>
+            
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.IsRequiredAttribute">
+            <summary>
+            Summary description for IsIndentity
+            </summary>
+            
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.IsKeyAttribute">
+            <summary>
+            Summary description for IsIndentity
+            </summary>
+            
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.TableAttribute">
+            <summary>
+            Summary description for TableAttribute
+            </summary>
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.IsUUIDAttribute">
+            <summary>
+            Summary description for UUIDAttr
+            </summary>
+            
+        </member>
+        <member name="T:Khronus.Framework.DataAccess.ORM.ValueObject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.ORM.ValueObject.CreateDateTime">
+            <summary>
+            Date e hora da criação do registro
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.ORM.ValueObject.LastUpdateDatetime">
+            <summary>
+            Date e hora da ultima atualização
+            </summary>
+        </member>
+        <member name="P:Khronus.Framework.DataAccess.ORM.ValueObject.DisabledValidation">
+            <summary>
+            Permite desabilitar a validação automatica do modelo
+            </summary>
+        </member>
+        <member name="M:Khronus.Framework.DataAccess.ORM.ValueObject.ToString">
+            <summary>
+            Serialização customizada do modelo
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
